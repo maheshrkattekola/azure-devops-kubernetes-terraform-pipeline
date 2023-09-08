@@ -17,6 +17,7 @@ stages:
     - bash: echo Build firstjob
     - bash: echo $(PipelineLevelVariable)
     - bash: echo $(Build.BuildNumber)
+    - bash: pwd
 # - stage:  DevDeploy
 #   jobs:
 #   - job:  secondjob

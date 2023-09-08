@@ -20,7 +20,7 @@ stages:
       displayName: Build an image
       inputs:
         containerRegistry: 'First Project'
-        repository: 'docker/cashdocker'
+        repository: 'cashdocker'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: '$(tag)'

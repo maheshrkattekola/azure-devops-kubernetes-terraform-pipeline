@@ -17,6 +17,7 @@ stages:
     - bash: echo Build firstjob
     - bash: echo $(PipelineLevelVariable)
     - bash: echo $(Build.BuildNumber)
+    - bash: echo $(Build.ArtifactStagingDirectory)
     - bash: pwd
     - bash: java -version
     - bash: node --version
@@ -26,6 +27,7 @@ stages:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
         ArtifactName: 'drop'
         publishLocation: 'Container'
+    
 # - stage:  DevDeploy
 #   jobs:
 #   - job:  secondjob

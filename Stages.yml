@@ -18,6 +18,17 @@ stages:
     - bash: echo $(PipelineLevelVariable)
     - bash: echo $(Build.BuildNumber)
     - bash: pwd
+    - bash: java -version
+    - bash: node --version
+    - bash: python --version
+    - task: CopyFiles@2
+      inputs:
+        SourceFolder: '$(PipelineLevelVariable)'
+        Contents: |
+          **/*yaml
+          **/*.tf
+        TargetFolder: 'pwd'
+    - bash: pwd
 # - stage:  DevDeploy
 #   jobs:
 #   - job:  secondjob

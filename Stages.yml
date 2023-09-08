@@ -15,18 +15,20 @@ stages:
   - job:  firstjob
     steps:
     - bash: echo Build firstjob
-- stage:  DevDeploy
-  jobs:
-  - job:  secondjob
-    steps:
-    - bash: echo secondjob
-- stage:  QADeploy
-  jobs:
-  - job:  thirdjob
-    steps:
-    - bash: echo Build qadeployjob
-- stage:  ProdDeploy
-  jobs:
-  - job:  fourthjob
-    steps:
-    - bash: echo Build prodjob
+    - bash: echo $(PipelineLevelVariable)
+    - bash: echo $(Build.BuildNumber)
+# - stage:  DevDeploy
+#   jobs:
+#   - job:  secondjob
+#     steps:
+#     - bash: echo secondjob
+# - stage:  QADeploy
+#   jobs:
+#   - job:  thirdjob
+#     steps:
+#     - bash: echo Build qadeployjob
+# - stage:  ProdDeploy
+#   jobs:
+#   - job:  fourthjob
+#     steps:
+#     - bash: echo Build prodjob

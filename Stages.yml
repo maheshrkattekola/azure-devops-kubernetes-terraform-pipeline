@@ -17,16 +17,16 @@ stages:
     - bash: echo Build firstjob
 - stage:  DevDeploy
   jobs:
-  - job:  devdeploy job
+  - job:  secondjob
     steps:
-    - bash: echo Build devdeploy job
+    - bash: echo secondjob
 - stage:  QADeploy
   jobs:
-  - job:  qadeploy job
+  - job:  thirdjob
     steps:
     - bash: echo Build qadeployjob
 - stage:  ProdDeploy
   jobs:
-  - job:  prod job
+  - job:  fourthjob
     steps:
-    - bash: echo Build prod job
+    - bash: echo Build prodjob
